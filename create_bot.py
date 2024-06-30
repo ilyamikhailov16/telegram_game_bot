@@ -43,10 +43,7 @@ response = ""
 used_cities_list = []
 move_count = 0
 unplayable_letters = "ыьъ"
-
-# Конечно, я жестоко нарушаю принцип DRY и накопировал всё, что можно, но главное, что работает... :)
-
-
+
 @dp.message()
 async def game(message: types.Message):
     global move_count
