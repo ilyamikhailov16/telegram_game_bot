@@ -42,8 +42,10 @@ async def help_command(message: types.Message):
 response = ""
 used_cities_list = []
 move_count = 0
-unplayable_letters = "ыьъ"
-
+unplayable_letters = "ыьъё"
+
+
+
 @dp.message()
 async def game(message: types.Message):
     global move_count
