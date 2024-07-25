@@ -21,20 +21,20 @@ async def start_command(message: types.Message):
     await message.answer("Привет, бросишь мне вызов? Называй свой город")
 
 
-@dp.message(F.text, Command("info"))
+@dp.message(Command("info"))
 async def info_command(message: types.Message):
     await message.answer(
         "В моей базе более 7000 городов и муниципалитетов,\nэто немало, но отдельных городов, конечно, может не хватать,\nможешь написать на @ilyamikhailov16, если хочешь, чтобы был добавлен какой-то город"
     )
 
 
-@dp.message(F.text, Command("replay"))
+@dp.message(Command("replay"))
 async def replay_command(message: types.Message):
     await message.answer("Перезапускаю бота...")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@dp.message(F.text, Command("help"))
+@dp.message(Command("help"))
 async def help_command(message: types.Message):
     await message.answer(rules)
 
